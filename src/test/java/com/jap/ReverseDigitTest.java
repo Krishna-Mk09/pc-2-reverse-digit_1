@@ -1,20 +1,21 @@
 package com.jap;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ReverseDigitTest {
 
     ReverseDigit reverseDigit;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         reverseDigit = new ReverseDigit();
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
 
     }
@@ -37,7 +38,7 @@ public class ReverseDigitTest {
         int expected = 54321;
         //act
         int actualResult = reverseDigit.getReverse(number);
-        Assert.assertEquals(expected, actualResult);
+        Assertions.assertEquals(expected, actualResult);
 
     }
 }
